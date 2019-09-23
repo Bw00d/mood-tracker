@@ -20,7 +20,7 @@
 
 
 // Base colors
-$brand-primary: #002f5e;
+$brand-primary: #07c5ff;
 // Used in navbar and button hovers and in links
 $brand-light:           lighten(desaturate($brand-primary, 20%), 15%);
 // Used in form input field focus (glowing border), the "info" color
@@ -45,8 +45,8 @@ $gray-lightest:          lighten(#000, 98%);
 // Body
 $body-bg:               white;
 body {
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 // Alerts and form feedback states
@@ -160,6 +160,35 @@ $navbar-default-link-active-bg:            $brand-light;
 $navbar-default-link-disabled-color:       $gray-lighter;
 $navbar-default-link-disabled-bg:          $brand-light;
 
+.navbar-toggle {
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-color: white !important;
+}
+.icon-bar {
+  background-color: white !important;
+}
+
+button.navbar-toggle:hover {
+  background-color: transparent !important;
+}
+button.navbar-toggle:visited {
+  background-color: transparent !important;
+}
+button.navbar-toggle:active {
+  background-color: transparent !important;
+}
+.navbar-default {
+  border-color: white;
+}
 // Navbar items font weight
 .nav > li > a {
   font-weight: 500;
@@ -172,7 +201,8 @@ body {
 
 // Centralize logo vertically in the navbar
 .navbar-brand {
-  padding-top: 10px !important;
+  padding-top: 15px !important;
+  font-weight: 700;
 }
 
 // Pagination
