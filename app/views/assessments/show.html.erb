@@ -1,34 +1,54 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Fatigue:</strong>
-  <%= @assessment.fatigue %>
-</p>
+<div class="col-md-6 col-xs-12 center-block">
 
-<p>
-  <strong>Wake time:</strong>
-  <%= @assessment.wake_time %>
-</p>
+      <div>
+        <h4>Date</h4>
+        <%= @assessment.date.try(:strftime, "%b %e, %Y")  %>
+      </div>
 
-<p>
-  <strong>Bed time:</strong>
-  <%= @assessment.bed_time %>
-</p>
+      <div>
+        <h4>Bed time</h4>
+        <%= @assessment.bed_time.try(:strftime, "%I:%M %p") %>
+      </div>
+      <div>
+        <h4>Wake time</h4>
+        
+        <%= @assessment.wake_time.try(:strftime, "%I:%M %p") %>
+      </div>
 
-<p>
-  <strong>Sleep quality:</strong>
-  <%= @assessment.sleep_quality %>
-</p>
+  
+        <div>
+          <h4>Sleep quality</h4>
+          <%= @assessment.sleep_quality %>
+        </div>
 
-<p>
-  <strong>Date:</strong>
-  <%= @assessment.date %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= @assessment.user_id %>
-</p>
+        <div>
+          <h4>fatigue</h4>
+          <%= @assessment.fatigue %>
+        </div>
+        
+        <div>
+          <h4>energy</h4>
+          <%= @assessment.energy %>
+        </div>
 
-<%= link_to 'Edit', edit_assessment_path(@assessment) %> |
-<%= link_to 'Back', assessments_path %>
+      <div>
+        <h4>Kids</h4>
+    
+          <%= @assessment.have_kids %>
+      </div>
+
+      <div>
+        <h4>Sex</h4>
+          <%= @assessment.sex %>
+      </div>
+
+      <div>
+        <h4>Comment</h4>
+        <%= @assessment.comment %>
+      </div>
+
+  <%= link_to 'Edit', edit_assessment_path(@assessment) %> |
+  <%= link_to 'Back', assessments_path %>
+</div>
