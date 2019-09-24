@@ -1,0 +1,171 @@
+ <%= form_for @assessment do |f| %>
+      <% if @assessment.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@assessment.errors.count, "error") %> prohibited this assessment from being saved:</h2>
+
+          <ul>
+          <% @assessment.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <%= f.hidden_field :user_id, value: current_user.id %>
+    
+      <div class="form-group">
+        <%= f.label :date %>
+        <%= f.date_field :date, value: Date.today, class: "form-control radius" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label "What time did you go to sleep?" %>
+        <%= f.time_field :bed_time,  class: "form-control radius" %>
+      </div>
+      <div class="form-group">
+        <%= f.label "What time did you wake?" %>
+        <%= f.time_field :wake_time,  class: "form-control radius" %>
+      </div>
+
+      <div class="form-group raido-buttons">
+        <%= f.label "How well did you sleep?" %></br>
+        <div class="radio-buttons">
+          <%= f.label(:sleep_quality, "1") %></br>
+          <%= f.radio_button(:sleep_quality, "1") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:sleep_quality, "2") %></br>
+          <%= f.radio_button(:sleep_quality, "2") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:sleep_quality, "3") %></br>
+          <%= f.radio_button(:sleep_quality, "3") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:sleep_quality, "4") %></br>
+          <%= f.radio_button(:sleep_quality, "4") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:sleep_quality, "5") %></br>
+          <%= f.radio_button(:sleep_quality, "5") %>
+        </div>
+      </div>
+
+      <div class="form-group raido-buttons">
+        <%= f.label "How tired were you?" %></br>
+        <div class="radio-buttons">
+          <%= f.label(:fatigue, "1") %></br>
+          <%= f.radio_button(:fatigue, "1") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:fatigue, "2") %></br>
+          <%= f.radio_button(:fatigue, "2") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:fatigue, "3") %></br>
+          <%= f.radio_button(:fatigue, "3") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:fatigue, "4") %></br>
+          <%= f.radio_button(:fatigue, "4") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:fatigue, "5") %></br>
+          <%= f.radio_button(:fatigue, "5") %>
+        </div>
+      </div>
+
+      <div class="form-group raido-buttons">
+        <%= f.label "How is your energy?" %></br>
+        <div class="radio-buttons">
+          <%= f.label(:energy, "1") %></br>
+          <%= f.radio_button(:energy, "1") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:energy, "2") %></br>
+          <%= f.radio_button(:energy, "2") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:energy, "3") %></br>
+          <%= f.radio_button(:energy, "3") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:energy, "4") %></br>
+          <%= f.radio_button(:energy, "4") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:energy, "5") %></br>
+          <%= f.radio_button(:energy, "5") %>
+        </div>
+      </div>
+
+      <div class="form-group raido-buttons">
+        <%= f.label "How was your mood?" %></br>
+        <div class="radio-buttons">
+          <%= f.label(:wellbeing, "1") %></br>
+          <%= f.radio_button(:wellbeing, "1") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:wellbeing, "2") %></br>
+          <%= f.radio_button(:wellbeing, "2") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:wellbeing, "3") %></br>
+          <%= f.radio_button(:wellbeing, "3") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:wellbeing, "4") %></br>
+          <%= f.radio_button(:wellbeing, "4") %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:wellbeing, "5") %></br>
+          <%= f.radio_button(:wellbeing, "5") %>
+        </div>
+      </div>
+
+      <div class="form-group raido-buttons">
+        <%= f.label "Did you exercise?" %></br>
+        <div class="radio-buttons">
+          <%= f.label(:exercise, "yes") %></br>
+          <%= f.radio_button(:exercise, true) %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:exercise, "No") %></br>
+          <%= f.radio_button(:exercise, false) %>
+        </div>
+      </div>
+
+      <div class="form-group raido-buttons">
+        <%= f.label "Did you have the kids?" %></br>
+        <div class="radio-buttons">
+          <%= f.label(:have_kids, "yes") %></br>
+          <%= f.radio_button(:have_kids, true) %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:have_kids, "No") %></br>
+          <%= f.radio_button(:have_kids, false) %>
+        </div>
+      </div>
+
+      <div class="form-group raido-buttons">
+        <%= f.label "Did you have sex? :)" %></br>
+        <div class="radio-buttons">
+          <%= f.label(:sex, "yes") %></br>
+          <%= f.radio_button(:sex, true) %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:sex, "No") %></br>
+          <%= f.radio_button(:sex, false) %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :comment %></br>
+        <%= f.text_area :comment, class: "form-control radius" %>
+      </div>
+
+      <div class="wide-submit">
+        <%= f.submit "SUBMIT", class: "btn btn-success" %>
+      </div>
+
+    <% end %>

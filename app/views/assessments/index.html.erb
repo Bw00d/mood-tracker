@@ -1,0 +1,16 @@
+
+<div class="col-md-6 col-xs-12 center-block">
+<h1>Assessments</h1>
+
+    <% @assessments.each do |assessment| %>
+      <ul class="assessments-list">
+  
+        <li><%= link_to assessment.date.try(:strftime, "%b %e, %Y") %> 
+          <%= link_to (fa_icon('pencil')), edit_assessment_path(assessment), class: "pencil" %>  
+          <%= link_to (fa_icon('times-circle')), assessment, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-button" %></li>
+      </ul>
+    <% end %>
+<br>
+
+<%= link_to 'New Assessment', root_path %>
+</div>

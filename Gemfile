@@ -60,6 +60,7 @@ gem 'ransack'
 gem 'select2-rails'
 # Get e-mail notifications when exceptions happen in the production environment
 gem 'exception_notification'
+gem "font-awesome-rails"
 
 group :test do
   gem 'database_cleaner'

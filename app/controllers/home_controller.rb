@@ -2,5 +2,8 @@
 class HomeController < ApplicationController
   include SkipAuthorization
 
-  def index; end
+  def index; 
+    @user = current_user
+    @assessment = Assessment.new
+  end
 end

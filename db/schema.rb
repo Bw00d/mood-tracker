@@ -10,10 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170816134443) do
+ActiveRecord::Schema.define(version: 20190924063153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "assessments", force: :cascade do |t|
+    t.integer "fatigue"
+    t.time "wake_time"
+    t.time "bed_time"
+    t.integer "sleep_quality"
+    t.date "date"
+    t.integer "user_id"
+    t.integer "energy"
+    t.boolean "sex"
+    t.integer "wellbeing"
+    t.boolean "exercise"
+    t.boolean "have_kids"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
     t.string "slug", null: false

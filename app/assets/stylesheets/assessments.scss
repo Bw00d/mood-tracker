@@ -1,0 +1,16 @@
+.assessments-list {
+  list-style: none;
+    padding-left: 0;
+  li {
+    font-size: 1.2em;
+  }
+  a {
+    margin-right: 10px;
+  }
+  a.pencil {
+    color: black;
+  }
+  a.delete-button {
+    color: red;
+  }
+}
