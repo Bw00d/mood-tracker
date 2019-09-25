@@ -46,4 +46,8 @@ module ApplicationHelper
 
     html.html_safe
   end
+
+  def human_boolean(boolean)
+    boolean ? 'Yes' : 'No'
+  end
 end
