@@ -4,6 +4,10 @@ class HomeController < ApplicationController
 
   def index; 
     @user = current_user
-    @assessment = Assessment.new
+    if @user.assessments.last.date == Date.today
+      @assessment = @user.assessments.last
+    else
+      @assessment = Assessment.new
+    end
   end
 end

@@ -30,7 +30,7 @@ class AssessmentsController < ApplicationController
 
     respond_to do |format|
       if @assessment.save
-        format.html { redirect_to @assessment, notice: 'Assessment was successfully created.' }
+        format.html { redirect_to @assessment }
         format.json { render :show, status: :created, location: @assessment }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class AssessmentsController < ApplicationController
   def update
     respond_to do |format|
       if @assessment.update(assessment_params)
-        format.html { redirect_to @assessment, notice: 'Assessment was successfully updated.' }
+        format.html { redirect_to @assessment }
         format.json { render :show, status: :ok, location: @assessment }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class AssessmentsController < ApplicationController
   def destroy
     @assessment.destroy
     respond_to do |format|
-      format.html { redirect_to assessments_url, notice: 'Assessment was successfully destroyed.' }
+      format.html { redirect_to assessments_url }
       format.json { head :no_content }
     end
   end
