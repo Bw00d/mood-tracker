@@ -1,7 +1,7 @@
 $(document).ready(function(){
   // selecting face on page load
-  value = $('#assessment-wellbeing').val()
-  $("a[data-id=" + value + " ]").addClass('selected-face');
+  // value = $('#assessment-wellbeing').val()
+  // $("a[data-id=" + value + " ]").addClass('selected-face');
 
   // changing face
   $('.face-icon').click(function(){
