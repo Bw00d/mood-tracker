@@ -1,51 +1,51 @@
 
-<div class="col-md-6 col-xs-12 center-block">
+<div id="show-assessment" class="col-md-6 col-xs-12 center-block">
 
       <div>
-        <h5>Date</h5>
+        <h5>Date:</h5>
         <%= @assessment.date.try(:strftime, "%b %e, %Y")  %>
       </div>
 
       <div>
-        <h5>Bed time</h5>
+        <h5>Bed time:</h5>
         <%= @assessment.bed_time.try(:strftime, "%I:%M %p") %>
       </div>
       <div>
-        <h5>Wake time</h5>
+        <h5>Wake time:</h5>
         
         <%= @assessment.wake_time.try(:strftime, "%I:%M %p") %>
       </div>
 
   
         <div>
-          <h5>Sleep quality</h5>
+          <h5>Sleep quality:</h5>
           <%= @assessment.sleep_quality %>
         </div>
 
 
         <div>
-          <h5>fatigue</h5>
+          <h5>fatigue:</h5>
           <%= @assessment.fatigue %>
         </div>
         
         <div>
-          <h5>energy</h5>
+          <h5>energy:</h5>
           <%= @assessment.energy %>
         </div>
 
       <div>
-        <h5>Kids</h5>
+        <h5>Kids:</h5>
     
           <%= @assessment.have_kids %>
       </div>
 
       <div>
-        <h5>Sex</h5>
+        <h5>Sex:</h5>
           <%= @assessment.sex %>
       </div>
 
       <div>
-        <h5>Comment</h5>
+        <h5>Comment:</h5>
         <%= @assessment.comment %>
       </div>
 
