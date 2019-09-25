@@ -103,11 +103,11 @@
         <%= f.label "How was your mood?" %></br>
         <div class="mood-box">
           <%= f.hidden_field(:wellbeing, value: @assessment.wellbeing || 0, id: "assessment-wellbeing") %>
-          <%= link_to (fa_icon('sad-tear')), 'javascript:;', class: 'face-icon', data: { :id => "1" } %>
-          <%= link_to (fa_icon('frown')), 'javascript:;', class: 'face-icon', data: { :id => "2" } %>
-          <%= link_to (fa_icon('meh')), 'javascript:;', class: 'face-icon', data: { :id => "3" } %>
-          <%= link_to (fa_icon('smile')), 'javascript:;', class: 'face-icon', data: { :id => "4" } %>
-          <%= link_to (fa_icon('grin')), 'javascript:;', class: 'face-icon', data: { :id => "5" } %>
+          <%= link_to (fa_icon('sad-tear', type: :regular)), 'javascript:;', class: 'face-icon', data: { :id => "1" } %>
+          <%= link_to (fa_icon('frown', type: :regular)), 'javascript:;', class: 'face-icon', data: { :id => "2" } %>
+          <%= link_to (fa_icon('meh', type: :regular)), 'javascript:;', class: 'face-icon', data: { :id => "3" } %>
+          <%= link_to (fa_icon('smile', type: :regular)), 'javascript:;', class: 'face-icon', data: { :id => "4" } %>
+          <%= link_to (fa_icon('grin', type: :regular)), 'javascript:;', class: 'face-icon', data: { :id => "5" } %>
         </div>
       </div>
 
