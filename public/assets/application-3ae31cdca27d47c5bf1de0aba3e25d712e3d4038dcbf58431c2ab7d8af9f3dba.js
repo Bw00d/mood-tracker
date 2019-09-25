@@ -21476,6 +21476,15 @@ return sweetAlert;
 
 })));
 if (window.Sweetalert2) window.sweetAlert = window.swal = window.Sweetalert2;
+$(document).ready(function(){
+
+  // changing face
+  $('.face-icon').click(function(){
+    $('#assessment-wellbeing').val($(this).attr('data-id'));
+    $('.face-icon').removeClass('selected-face');
+    $(this).addClass('selected-face');
+  });
+});
 (function() {
   (function() {
     (function() {
