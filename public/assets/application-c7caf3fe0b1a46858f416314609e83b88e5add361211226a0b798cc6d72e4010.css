@@ -17782,43 +17782,60 @@ body.swal2-iosfix {
 .assessments-list a {
   margin-right: 10px;
 }
-/* line 10, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
-.assessments-list a.pencil {
-  color: black;
-}
-/* line 13, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
-.assessments-list a.delete-button {
-  color: red;
-}
 
-/* line 17, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
+/* line 11, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
 .face-icon {
-  color: #FFDF00;
+  /*color: #FFDF00;*/
+  color: #444;
   font-size: 3em;
 }
 
-/* line 21, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
+/* line 16, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
 .mood-box {
   display: flex;
   justify-content: space-around;
 }
 
-/* line 25, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
+/* line 20, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
 .selected-face {
   color: #6ACEEC;
 }
 
-/* line 29, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
+/* line 24, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
+#show-assessment i {
+  font-size: 1.3em;
+}
+/* line 27, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
 #show-assessment h5 {
   display: inline-block;
   color: #444;
   margin-right: 10px;
   font-weight: 700;
 }
-
+/* line 33, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
+#show-assessment a.pencil {
+  color: black;
+  margin-right: 30px;
+}
 /* line 37, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
+#show-assessment a.delete-button {
+  color: red;
+}
+
+/* line 42, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
 #assessment-index h1 {
   color: #444;
+}
+
+/* line 46, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
+.mood-for-index {
+  margin-right: 15px;
+}
+
+/* line 49, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/assessments.scss */
+.flex-box {
+  display: flex;
+  justify-content: space-around;
 }
 /* line 2, /Users/bwood/code/rails/5.1/mood-tracker/app/assets/stylesheets/custom-sytle.css.scss */
 .welcome input {
