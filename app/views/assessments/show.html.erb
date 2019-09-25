@@ -19,19 +19,38 @@
   
         <div>
           <h5>Sleep quality:</h5>
-          <%= @assessment.sleep_quality %>
+          <% case @assessment.sleep_quality 
+             when 1 %>Horrible
+          <% when 2 %>Poor
+          <% when 3 %>Average
+          <% when 4 %>Soundly
+          <% when 5 %>Deeply
+          <% end %>
         </div>
 
 
         <div>
-          <h5>fatigue:</h5>
-          <%= @assessment.fatigue %>
+          <h5>Fatigue:</h5>
+          <% case @assessment.fatigue 
+             when 1 %>Exhausted
+          <% when 2 %>Tired
+          <% when 3 %>Average
+          <% when 4 %>Rested
+          <% when 5 %>Replenished
+          <% end %>
         </div>
 
         
         <div>
           <h5>Energy:</h5>
-          <%= @assessment.energy %>
+          
+          <% case @assessment.energy 
+             when 1 %>Lathargic
+          <% when 2 %>Subdued
+          <% when 3 %>Average
+          <% when 4 %>Amped
+          <% when 5 %>Exuberant
+          <% end %>
         </div>
 
         <div>

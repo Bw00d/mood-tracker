@@ -7,13 +7,15 @@
   
         <li><%= link_to assessment.date.try(:strftime, "%b %e, %Y"), assessment %> 
 
-          <span class="mood-for-index"><% case assessment.wellbeing 
-                       when 1 %><%= fa_icon('sad-tear', type: :regular) %>
-                    <% when 2 %><%= fa_icon('frown', type: :regular) %>
-                    <% when 3 %><%= fa_icon('meh', type: :regular) %>
-                    <% when 4 %><%= fa_icon('smile', type: :regular) %>
-                    <% when 5 %><%= fa_icon('grin', type: :regular) %>
-                    <% end %></span>
+          <span class="mood-for-index">
+            <% case assessment.wellbeing 
+                 when 1 %><%= fa_icon('sad-tear', type: :regular) %>
+              <% when 2 %><%= fa_icon('frown', type: :regular) %>
+              <% when 3 %><%= fa_icon('meh', type: :regular) %>
+              <% when 4 %><%= fa_icon('smile', type: :regular) %>
+              <% when 5 %><%= fa_icon('grin', type: :regular) %>
+            <% end %>
+          </span>
 
           </li>
       </ul>
