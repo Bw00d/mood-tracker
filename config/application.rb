@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module ZenRailsBaseApp
+module MoodTracker
   :nodoc
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -18,6 +18,7 @@ module ZenRailsBaseApp
     # loaded.
 
     # Locale config
+    config.active_record.default_timezone = :local
     config.i18n.default_locale = :en
     config.i18n.available_locales = [:en]
     config.i18n.load_path +=
