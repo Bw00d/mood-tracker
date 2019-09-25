@@ -102,7 +102,7 @@
       <div class="form-group raido-buttons">
         <%= f.label "How was your mood?" %></br>
         <div class="mood-box">
-          <%= f.hidden_field(:wellbeing, id: "assessment-wellbeing") %>
+          <%= f.hidden_field(:wellbeing, value: @assessment.wellbeing || 0, id: "assessment-wellbeing") %>
           <%= link_to (fa_icon('sad-tear')), 'javascript:;', class: 'face-icon', data: { :id => "1" } %>
           <%= link_to (fa_icon('frown')), 'javascript:;', class: 'face-icon', data: { :id => "2" } %>
           <%= link_to (fa_icon('meh')), 'javascript:;', class: 'face-icon', data: { :id => "3" } %>
@@ -159,8 +159,8 @@
 
     <% end %>
 <script type="text/javascript">
-  if ($('#assessment-wellbeing').val() !== "") {
+  
     value = $('#assessment-wellbeing').val()
     $("a[data-id=" + value + " ]").addClass('selected-face');
-  }
+ 
 </script>
