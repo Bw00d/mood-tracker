@@ -159,6 +159,8 @@
 
     <% end %>
 <script type="text/javascript">
+  if ($('#assessment-wellbeing').val() !== "") {
     value = $('#assessment-wellbeing').val()
     $("a[data-id=" + value + " ]").addClass('selected-face');
+  }
 </script>
