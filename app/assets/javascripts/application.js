@@ -21,5 +21,4 @@
 //= require bootstrap-sprockets
 //= require select2
 //= require sweetalert2/dist/sweetalert2
-//= require local-time
 //= require_tree .
