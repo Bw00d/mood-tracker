@@ -61,6 +61,6 @@
         <%= @assessment.comment %>
       </div>
 
-  <%= link_to 'Edit', edit_assessment_path(@assessment) %> |
-  <%= link_to 'Back', assessments_path %>
+      <%= link_to (fa_icon('pencil-alt')), edit_assessment_path(@assessment), class: "pencil" %>   
+      <%= link_to (fa_icon('times-circle')), @assessment, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-button" %>
 </div>

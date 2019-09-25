@@ -7,12 +7,6 @@
   a {
     margin-right: 10px;
   }
-  a.pencil {
-    color: black;
-  }
-  a.delete-button {
-    color: red;
-  }
 }
 .face-icon {
   /*color: #FFDF00;*/
@@ -27,15 +21,28 @@
   color: #6ACEEC;
 }
 #show-assessment {
+  i {
+    font-size: 1.3em;
+  }
   h5 {
     display: inline-block;
     color: #444;
     margin-right: 10px;
     font-weight: 700;
   }
+  a.pencil {
+    color: black;
+    margin-right: 30px;
+  }
+  a.delete-button {
+    color: red;
+  }
 }
 #assessment-index {
   h1 {
     color: #444;
   }
+}
+.mood-for-index {
+  margin-right: 15px;
 }

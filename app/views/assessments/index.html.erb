@@ -6,8 +6,16 @@
       <ul class="assessments-list">
   
         <li><%= link_to assessment.date.try(:strftime, "%b %e, %Y"), assessment %> 
-          <%= link_to (fa_icon('pencil-alt')), edit_assessment_path(assessment), class: "pencil" %>  
-          <%= link_to (fa_icon('times-circle')), assessment, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-button" %></li>
+
+          <span class="mood-for-index"><% case assessment.wellbeing 
+                       when 1 %><%= fa_icon('sad-tear', type: :regular) %>
+                    <% when 2 %><%= fa_icon('frown', type: :regular) %>
+                    <% when 3 %><%= fa_icon('meh', type: :regular) %>
+                    <% when 4 %><%= fa_icon('smile', type: :regular) %>
+                    <% when 5 %><%= fa_icon('grin', type: :regular) %>
+                    <% end %></span>
+
+          </li>
       </ul>
     <% end %>
 <br>
