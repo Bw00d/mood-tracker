@@ -31,23 +31,23 @@
         <%= f.label "How well did you sleep?" %></br>
         <div class="flex-box">
           <div class="">
-            <%= f.label(:sleep_quality, "Horribly") %></br>
+            <%= f.label(:sleep_quality, "1") %></br>
             <%= f.radio_button(:sleep_quality, "1") %>
           </div>
           <div>
-            <%= f.label(:sleep_quality, "Poorly") %></br>
+            <%= f.label(:sleep_quality, "2") %></br>
             <%= f.radio_button(:sleep_quality, "2") %>
           </div>
           <div>
-            <%= f.label(:sleep_quality, "Average") %></br>
+            <%= f.label(:sleep_quality, "3") %></br>
             <%= f.radio_button(:sleep_quality, "3") %>
           </div>
           <div>
-            <%= f.label(:sleep_quality, "Soundly") %></br>
+            <%= f.label(:sleep_quality, "4") %></br>
             <%= f.radio_button(:sleep_quality, "4") %>
           </div>
           <div>
-            <%= f.label(:sleep_quality, "Deeply") %></br>
+            <%= f.label(:sleep_quality, "5") %></br>
             <%= f.radio_button(:sleep_quality, "5") %>
           </div>
         </div>
@@ -57,23 +57,23 @@
         <%= f.label "How tired were you?" %></br>
         <div class="flex-box">
           <div>
-            <%= f.label(:fatigue, "Exhausted") %></br>
+            <%= f.label(:fatigue, "1") %></br>
             <%= f.radio_button(:fatigue, "1") %>
           </div>
           <div>
-            <%= f.label(:fatigue, "Tired") %></br>
+            <%= f.label(:fatigue, "2") %></br>
             <%= f.radio_button(:fatigue, "2") %>
           </div>
           <div>
-            <%= f.label(:fatigue, "Normal") %></br>
+            <%= f.label(:fatigue, "3") %></br>
             <%= f.radio_button(:fatigue, "3") %>
           </div>
           <div>
-            <%= f.label(:fatigue, "Rested") %></br>
+            <%= f.label(:fatigue, "4") %></br>
             <%= f.radio_button(:fatigue, "4") %>
           </div>
           <div>
-            <%= f.label(:fatigue, "Replenished") %></br>
+            <%= f.label(:fatigue, "5") %></br>
             <%= f.radio_button(:fatigue, "5") %>
           </div>
         </div>
@@ -83,23 +83,23 @@
         <%= f.label "How is your energy?" %></br>
         <div class="flex-box">
           <div>
-            <%= f.label(:energy, "Lathargic") %></br>
+            <%= f.label(:energy, "1") %></br>
             <%= f.radio_button(:energy, "1") %>
           </div>
           <div>
-            <%= f.label(:energy, "Subdued") %></br>
+            <%= f.label(:energy, "2") %></br>
             <%= f.radio_button(:energy, "2") %>
           </div>
           <div>
-            <%= f.label(:energy, "Normal") %></br>
+            <%= f.label(:energy, "3") %></br>
             <%= f.radio_button(:energy, "3") %>
           </div>
           <div>
-            <%= f.label(:energy, "Amped") %></br>
+            <%= f.label(:energy, "4") %></br>
             <%= f.radio_button(:energy, "4") %>
           </div>
           <div>
-            <%= f.label(:energy, "Exuberant") %></br>
+            <%= f.label(:energy, "5") %></br>
             <%= f.radio_button(:energy, "5") %>
           </div>
         </div>
@@ -114,6 +114,30 @@
           <%= link_to (fa_icon('meh', type: :regular)), 'javascript:;', class: 'face-icon', data: { :id => "3" } %>
           <%= link_to (fa_icon('smile', type: :regular)), 'javascript:;', class: 'face-icon', data: { :id => "4" } %>
           <%= link_to (fa_icon('grin', type: :regular)), 'javascript:;', class: 'face-icon', data: { :id => "5" } %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label "Do you have a headache?" %></br>
+        <div class="radio-buttons">
+          <%= f.label(:headache, "yes") %></br>
+          <%= f.radio_button(:headache, true) %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:headache, "No") %></br>
+          <%= f.radio_button(:headache, false) %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label "Does your stomach ache?" %></br>
+        <div class="radio-buttons">
+          <%= f.label(:stomach_ache, "yes") %></br>
+          <%= f.radio_button(:stomach_ache, true) %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:stomach_ache, "No") %></br>
+          <%= f.radio_button(:stomach_ache, false) %>
         </div>
       </div>
 
@@ -150,6 +174,30 @@
         <div class="radio-buttons">
           <%= f.label(:sex, "No") %></br>
           <%= f.radio_button(:sex, false) %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label "Do you have PMS?" %></br>
+        <div class="radio-buttons">
+          <%= f.label(:pms, "yes") %></br>
+          <%= f.radio_button(:pms, true) %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:pms, "No") %></br>
+          <%= f.radio_button(:pms, false) %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label "Do you have your period? :)" %></br>
+        <div class="radio-buttons">
+          <%= f.label(:period, "yes") %></br>
+          <%= f.radio_button(:period, true) %>
+        </div>
+        <div class="radio-buttons">
+          <%= f.label(:period, "No") %></br>
+          <%= f.radio_button(:period, false) %>
         </div>
       </div>
 

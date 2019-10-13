@@ -72,6 +72,7 @@ class AssessmentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def assessment_params
       params.require(:assessment).permit(:fatigue, :wake_time, :bed_time, :sleep_quality, :date, :user_id,
-                                         :have_kids, :sex, :energy, :wellbeing, :exercise, :comment)
+                                         :have_kids, :sex, :energy, :wellbeing, :exercise, :comment, 
+                                         :headache, :stomach_ache, :pms, :period, :pain)
     end
 end
